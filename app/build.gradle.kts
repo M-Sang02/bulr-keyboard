@@ -15,12 +15,20 @@ android {
         versionName = "1.0.0"
     }
 
-    buildFeatures { buildConfig = true }
-compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
-    kotlinOptions { jvmTarget = "17" }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildTypes {
+        debug {
+            // The Android Gradle Plugin automatically signs debug APKs with its debug key.
+        }
+    }
 }
 
 dependencies {
